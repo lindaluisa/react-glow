@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Schedule } from './components';
+import { Schedule, Header, Footer } from "./components";
 
 import "./styles.css";
 
 function App() {
   return (
     <div className="App">
-      <Schedule/>
+      <Header />
+      <Schedule />
+      <Footer />
     </div>
   );
 }

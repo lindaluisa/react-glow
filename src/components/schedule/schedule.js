@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Appointment from './appointment';
+import Appointment from "./appointment";
+import "./schedule.css";
 
 async function fetchData(fnSuccess, fnError) {
   const res = await fetch("/treatment.json");
@@ -21,9 +22,9 @@ export default function Schedule() {
     <div>
       <h1>Schedule</h1>
       <ul className="treatment-list">
-        {
-          treatments.map((t, index) => <Appointment key={index} info={t} />)
-        }
+        {treatments.map((t, index) => (
+          <Appointment key={index} info={t} />
+        ))}
       </ul>
     </div>
   );

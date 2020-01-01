@@ -1,0 +1,22 @@
+.schedulecard_wrapper {
+  width: 60vw;
+  display: flex;
+  margin: auto;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  margin: 10px auto;
+  align-items: center;
+}
+
+.schedulecard_wrapper > * {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.schedulecard_image[data-available="false"] {
+  opacity: 0.5;
+}
+
+/*.schedulecard_image[data-available="false"]::before {
+  content: "FULLY BOOKED";
+}/*
