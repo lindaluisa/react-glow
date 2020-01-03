@@ -1,22 +1,74 @@
 .schedulecard_wrapper {
-  width: 60vw;
+  width: 90vw;
+  contain: content;
   display: flex;
+  flex-direction: column;
   margin: auto;
-  border: 1px solid lightgrey;
-  padding: 10px;
-  margin: 10px auto;
+  background: linear-gradient(to top left, white, var(--main));
+  padding: var(--standard-margin);
+  margin: var(--standard-margin) auto;
   align-items: center;
+  align-items: stretch;
 }
 
 .schedulecard_wrapper > * {
   flex-grow: 1;
-  width: 50%;
 }
 
-.schedulecard_image[data-available="false"] {
+.schedulecard_image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.schedulecard_description {
+  padding-left: var(--standard-margin);
+  align-self: center;
+}
+
+.schedulecard_description-specialist {
+  font-style: italic;
+  margin: var(--standard-margin) 0;
+  font-size: 0.8rem;
+}
+
+.schedulecard_description-price {
+  margin: var(--standard-margin) 0;
+  font-weight: 700;
+}
+
+.schedulecard_image-container[data-available="false"]::before {
+  content: "FULLY BOOKED";
+  position: absolute;
+  z-index: 1;
+  background-color: var(--black);
+  color: white;
+  padding: var(--standard-padding);
+}
+
+.schedulecard_image-container[data-available="false"] img {
   opacity: 0.5;
 }
 
-/*.schedulecard_image[data-available="false"]::before {
-  content: "FULLY BOOKED";
-}/*
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .schedulecard_wrapper {
+    width: 80vw;
+    max-height: 30vh;
+    flex-direction: row;
+  }
+
+  .schedulecard_wrapper > * {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .schedulecard_wrapper {
+    width: 60vw;
+    max-height: 30vh;
+    flex-direction: row;
+  }
+
+  .schedulecard_wrapper > * {
+    width: 50%;
+  }
+}

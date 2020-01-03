@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Schedule, Header, Footer } from "./components";
+import { BrowserRouter, Route } from "react-router-dom";
+import { Homepage, Schedule, Header, Footer } from "./components";
 
 import "./styles.css";
 
@@ -8,7 +9,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Schedule />
+      <BrowserRouter>
+        <Route path="/" exact component={Homepage} />
+        <Route path="/schedule" exact component={Schedule} />
+      </BrowserRouter>
       <Footer />
     </div>
   );

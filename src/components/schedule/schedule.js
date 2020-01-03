@@ -20,7 +20,9 @@ export default function Schedule() {
 
   return (
     <div>
-      <h1>Schedule</h1>
+      <div className="headline">
+        <h1>SCHEDULE</h1>
+      </div>
       <ul className="treatment-list">
         {treatments.map((t, index) => (
           <Appointment key={index} info={t} />

@@ -24,13 +24,8 @@ export default function Appointment({
 
   return (
     <div className="schedulecard_wrapper">
-      <div className="schedulecard_image-container">
-        <img
-          className="schedulecard_image"
-          src={imageUrl}
-          data-available={available}
-          alt=""
-        />
+      <div className="schedulecard_image-container" data-available={available}>
+        <img className="schedulecard_image" src={imageUrl} alt="" />
       </div>
       <div className="schedulecard_description">
         <h2 className="schedulecard_description-headline">{name}</h2>
@@ -42,6 +37,9 @@ export default function Appointment({
           {transformedStartTime} - {transformedEndTime}
         </p>
         <p className="schedulecard_description-price">{price}</p>
+        {available ? (
+          <button className="schedulecard_description-button">BOOK NOW</button>
+        ) : null}
       </div>
     </div>
   );

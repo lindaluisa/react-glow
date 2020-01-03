@@ -8,10 +8,14 @@ export default function Header() {
         <nav className="header_nav">
           <p className="title">Glow</p>
           <li>
-            <a href="#">Treatments</a>
+            <a href="#">
+              <span className="header_nav-link">Treatments</span>
+            </a>
           </li>
           <li>
-            <a href="#">My Bookings</a>
+            <a href="#">
+              <span className="header_nav-link">My Bookings</span>
+            </a>
           </li>
         </nav>
       </div>

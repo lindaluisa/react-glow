@@ -3,6 +3,7 @@ header {
   height: 5rem;
   background-color: #ff907769;
   color: #2d2d2d;
+  box-shadow: 0px 1px 5px 1px #2d2d2d2f;
   animation: changeColor 2s;
 }
 
@@ -30,7 +31,36 @@ header {
   }
 }
 
+.header_nav-link {
+  color: black;
+  list-style-type: none;
+}
+
 .header_nav li a {
+  position: relative;
   cursor: pointer;
+  text-decoration: none;
+  transition: color 0.4s ease-out;
+}
+
+a:hover {
   color: #2d2d2d;
+  right: 0;
+  text-decoration: none;
+  margin-bottom: 0.5em;
+}
+
+a:hover:after {
+  border: 2px dashed #2d2d2d;
+  right: 0;
+}
+
+a:after {
+  border-top: 0.3em dashed #2d2d2d;
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: -0.2em;
+  left: 0;
+  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1), border-color 0.4s ease-out;
 }
