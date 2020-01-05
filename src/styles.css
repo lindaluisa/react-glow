@@ -8,8 +8,9 @@
   --main: #f3e6e1;
   --highlight: #e59898;
   --black: #2d2d2d;
-  --lightgrey: lightgrey;
+  --bg-gradient: linear-gradient(to top left, white, var(--main));
   --standard-margin: 10px;
+  --double-margin: calc(var(--standard-margin) * 2);
   --standard-padding: 5px;
   font: normal 16px Gelasio;
 }
@@ -44,6 +45,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .headline h1 {

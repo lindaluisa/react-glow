@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  background: linear-gradient(to top left, white, var(--main));
+  background: var(--bg-gradient);
   padding: var(--standard-margin);
   margin: var(--standard-margin) auto;
   align-items: center;
@@ -47,6 +47,25 @@
 
 .schedulecard_image-container[data-available="false"] img {
   opacity: 0.5;
+}
+
+.filter-list li {
+  display: inline-block;
+  margin: 0 var(--double-margin);
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.filter-list li::before {
+  content: "";
+  display: inline-block;
+  width: calc(100% + var(--double-margin));
+  height: var(--standard-margin);
+  background-color: var(--highlight);
+  z-index: -1;
+  position: absolute;
+  left: -10px;
+  bottom: 0;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {

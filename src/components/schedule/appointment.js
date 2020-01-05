@@ -23,7 +23,7 @@ export default function Appointment({
   });
 
   return (
-    <div className="schedulecard_wrapper">
+    <li className="schedulecard_wrapper">
       <div className="schedulecard_image-container" data-available={available}>
         <img className="schedulecard_image" src={imageUrl} alt="" />
       </div>
@@ -41,6 +41,6 @@ export default function Appointment({
           <button className="schedulecard_description-button">BOOK NOW</button>
         ) : null}
       </div>
-    </div>
+    </li>
   );
 }
