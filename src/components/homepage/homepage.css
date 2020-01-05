@@ -1,0 +1,226 @@
+.homepage_mainbanner-wrapper,
+.homepage_secondarybanner-wrapper,
+.homepage_tercerybanner-wrapper {
+  position: relative;
+  margin: 0 var(--standard-margin);
+}
+
+.homepage_mainbanner-wrapper {
+  height: 75vh;
+  top: 30px;
+}
+
+.homepage_secondarybanner-wrapper {
+  height: 95vh;
+  margin-top: 130px;
+}
+
+.homepage_tercerybanner-wrapper {
+  height: 60vh;
+  margin-top: 35%;
+}
+
+.homepage_mainbanner-1 {
+  background: url("/glitter.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  right: 0;
+  top: 35%;
+}
+
+.homepage_mainbanner-bg {
+  background: url("/banner-chanel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 0%;
+  position: absolute;
+  height: inherit;
+  width: 100%;
+}
+
+.homepage_mainbanner-overlay {
+  background: var(--bg-gradient);
+  padding: var(--standard-margin);
+  position: absolute;
+  width: 90%;
+  height: fit-content;
+  bottom: 0;
+  right: 0;
+  top: 15%;
+}
+
+.homepage_banner-headline.headline,
+.homepage_banner-text {
+  margin: var(--standard-margin);
+}
+
+.homepage_secondarybanner-1 {
+  background: url("/plant.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  width: 60vw;
+  height: 60vh;
+}
+
+.homepage_secondarybanner-1-text {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-top: -11%;
+}
+
+.homepage_secondarybanner-bg {
+  background: url("/mascara.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  top: 20vh;
+  z-index: -1;
+}
+
+.homepage_secondarybanner-overlay {
+  padding: var(--standard-margin);
+  position: absolute;
+  bottom: -55px;
+}
+
+.homepage_tercerybanner-glitter {
+  background: url("/glitter.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 20%;
+}
+
+.homepage_tercerybanner-bg {
+  background: url("/marble.jpg");
+  background-size: contain;
+  position: absolute;
+  width: 80%;
+  height: 85%;
+  right: 0;
+}
+
+.homepage_tercerybanner-1 {
+  background: url("/parfum.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 30%;
+}
+
+@media only screen and (min-width: 600px) {
+  .homepage_wrapper {
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+  }
+
+  .homepage_mainbanner-bg {
+    background-position: top;
+    background-attachment: inherit;
+    width: 70%;
+    left: 0;
+    height: 45vh;
+    position: absolute;
+  }
+
+  .homepage_mainbanner-1 {
+    width: 80%;
+    top: 15vh;
+  }
+
+  .homepage_mainbanner-overlay {
+    width: 85%;
+    top: 25%;
+  }
+
+  .homepage_banner-headline.headline,
+  .homepage_banner-text {
+    margin: var(--double-margin);
+  }
+
+  .homepage_secondarybanner-wrapper {
+    margin-top: unset;
+  }
+
+  .homepage_secondarybanner-1 {
+    width: 50vw;
+    right: inherit;
+  }
+
+  .homepage_secondarybanner-1-text {
+    font-size: 3em;
+    margin-top: -7%;
+    margin-left: -20%;
+  }
+
+  .homepage_secondarybanner-bg {
+    background-position: inherit;
+    width: 40vw;
+    height: 60vh;
+    right: 0;
+  }
+
+  .homepage_secondarybanner-overlay {
+    width: 50vw;
+    bottom: 0;
+  }
+
+  .homepage_tercerybanner-wrapper {
+    margin-top: 15%;
+  }
+
+  .homepage_tercerybanner-bg {
+    width: 70%;
+    height: 90%;
+  }
+
+  .homepage_tercerybanner-1 {
+    width: 70%;
+    height: 85%;
+  }
+
+  .homepage_tercerybanner-glitter {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .homepage_wrapper {
+    width: 60vw;
+  }
+
+  .homepage_mainbanner-bg {
+    width: 60%;
+  }
+
+  .homepage_mainbanner-1 {
+    width: 60%;
+  }
+
+  .homepage_secondarybanner-1,
+  .homepage_secondarybanner-bg,
+  .homepage_secondarybanner-overlay {
+    width: 35vw;
+  }
+
+  .homepage_secondarybanner-1-text {
+    margin-top: -6%;
+  }
+}

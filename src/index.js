@@ -1,13 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import { Homepage, Schedule, Header, Footer } from "./components";
 
 import "./styles.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Header />
+      <BrowserRouter>
+        <Route path="/" exact component={Homepage} />
+        <Route path="/schedule" exact component={Schedule} />
+      </BrowserRouter>
+      <Footer />
     </div>
   );
 }
